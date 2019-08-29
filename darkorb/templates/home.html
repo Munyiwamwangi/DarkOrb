@@ -5,9 +5,11 @@
 </head>
 <body>
 	{% for movie in allmovies %}
+
     <p>{{ movie.title }}</p>
     <p>{{ movie.id }}</p>
     <p>{{ movie.overview }}</p>
+    
     {% endfor %}
 </body>
 </html>
