@@ -4,10 +4,10 @@
     <title></title>
 </head>
 <body>
-    <p>{{ title }}</p>
-    <p>{{ id }}</p>
-    <p>{{ overview }}</p>
-    <p>{{ release_date }}</p>
-    <p>{{ overview }}</p>
+	{% for movie in allmovies %}
+    <p>{{ movie.title }}</p>
+    <p>{{ movie.id }}</p>
+    <p>{{ movie.overview }}</p>
+    {% endfor %}
 </body>
 </html>
