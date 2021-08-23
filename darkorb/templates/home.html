@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
 </head>
-<body>
-	{% for movie in allmovies %}
 
-    <p>{{ movie.title }}</p>
-    <p>{{ movie.id }}</p>
-    <p>{{ movie.overview }}</p>
-    
+<body>
+    {% for movie in allmovies %}
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+            <div style="display: flex; flex-direction: unset;" class="column col col-sm-3 col-md-4 col-lg-2 col-xl card-section flax-container align-justify">
+                <div class="card ">
+                    <blockquote class="card-title mb-2 ">{{ movie.title }}</blockquote>
+                    <div class="card-body">
+                        <img src="{{ movie.poster }}" alt="">
+                        <p><cite class="card-text">{{movie.overview}}</cite></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
     {% endfor %}
 </body>
+
 </html>
